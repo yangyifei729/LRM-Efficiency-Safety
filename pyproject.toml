@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cprs-safety"
+version = "0.1.0"
+description = "Minimal experiments for On the Efficiency-Safety Dilemma in Large Reasoning Models"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = []
+
+[project.optional-dependencies]
+runtime = ["torch>=2.4,<2.7", "transformers==4.49.0", "tokenizers>=0.21,<0.22", "accelerate>=1.3,<2", "datasets>=3.2,<4", "sentencepiece>=0.2", "protobuf>=5", "safetensors>=0.5"]
+judge = ["openai>=1.30,<3"]
+math = ["math-verify==0.9.0"]
+awq = ["autoawq==0.2.9"]
+
+[project.scripts]
+cprs-safety = "cprs_safety.__main__:main"
+
+[tool.setuptools]
+license-files = ["LICENSE", "licenses/*.txt", "THIRD_PARTY.md"]
+
+[tool.setuptools.packages.find]
+include = ["cprs_safety*"]
+
+[tool.setuptools.package-data]
+cprs_safety = ["prompts/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
