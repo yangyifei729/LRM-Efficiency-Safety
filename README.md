@@ -1,6 +1,8 @@
 # LRM-Efficiency-Safety
 
 Code for **On the Efficiency-Safety Dilemma in Large Reasoning Models**.
+Accepted to the **EMNLP 2026 main conference**.
+
 We study how quantization, pruning, and KV cache compression affect reasoning,
 jailbreak vulnerability, and inference efficiency.
 
