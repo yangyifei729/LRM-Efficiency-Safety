@@ -11,17 +11,17 @@ jailbreak vulnerability, and inference efficiency.
 
 ## 🔍 Research questions and findings
 
-**RQ1: How do efficiency methods affect LRM safety?**
+**🛡️ RQ1: How do efficiency methods affect LRM safety?**
 Their effects depend on the model and compression method. Compression often
 reduces harmful outputs, but some configurations increase harmfulness.
 
-**RQ2: What is the trade-off between safety, efficiency, and reasoning?**
+**⚖️ RQ2: What is the trade-off between safety, efficiency, and reasoning?**
 Apparent safety gains often reflect degraded reasoning: models attempt to comply
 but fail to produce valid harmful answers, rather than becoming better aligned.
 Quantization generally preserves the original safety and reasoning behavior
 most closely; KV cache compression causes the largest capability degradation.
 
-**RQ3: How do combined efficiency methods compare with individual methods?**
+**🧩 RQ3: How do combined efficiency methods compare with individual methods?**
 Within the evaluated models and memory budgets, quantization combined with
 pruning offers the most favorable overall trade-off. Combined methods can
 preserve reasoning and safety behavior with lower memory use than individual
